@@ -1,0 +1,60 @@
+<div class="container bg-light p-4">
+    <div class="row">
+      <div class="col-7 m-auto">
+        <h1 class="text-center">Cadastro de Alunos</h1>
+        <form [formGroup]="formGroupStudent">  <!--[formGroupName=""] vincula o formulário com -->
+          <div class="mb-3">
+            <label for="matricula" class="form-label">Matricula</label>
+            <input
+              type="text"
+              class="form-control"
+              id="matricula"
+              formControlName="id"
+              />
+          </div>
+          <div class="mb-3">
+            <label for="aluno" class="form-label">Aluno</label>
+            <input
+              type="text"
+              class="form-control"
+              id="aluno"
+              formControlName="name"  
+            /> <!--(formControlName)-->
+          </div>
+          <div class="mb-3">
+            <label for="Curso" class="form-label">Curso</label>
+            <input
+              type="text"
+              class="form-control"
+              id="curso"
+              formControlName="course"  
+            />
+          </div>
+          <button type="submit" 
+          class="btn btn-primary"
+          (click)="save()"
+          > <!--((click)="save()") salva a informação-->
+              Salvar
+        </button>
+        </form>
+        <h2 class="text-center">Alunos:</h2>
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Matricula</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Curso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students">
+                <th scope="row">{{student.id}}</th>
+                <td>{{student.name}}</td>
+                <td>{{student.course}}</td> 
+              </tr> 
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+  
