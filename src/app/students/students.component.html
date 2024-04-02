@@ -35,7 +35,7 @@
                 <th scope="col">Matricula</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Curso</th>
-                <th class="d-flex justify-content-end" scope="col">Opções</th>
+                <th class="d-flex justify-content-evenly" scope="col">Opções</th>
               </tr>
             </thead>
             <tbody>
@@ -47,8 +47,9 @@
                   <button class="btn btn-danger me-2"
                   (click)="delete(student)"
                   >Remover</button>
-                  <button class="btn btn-primary">
-                    Editar 
+                  <button class="btn btn-primary"
+                  (click)="edit(student)"
+                  >Editar 
                   </button>
                 </td>
               </tr> 

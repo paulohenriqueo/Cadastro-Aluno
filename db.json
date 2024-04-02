@@ -4,6 +4,16 @@
       "id": 1,
       "name": "Paulo",
       "course": "Computação"
+    },
+    {
+      "id": 2,
+      "name": "rod",
+      "course": "amor da minha vida"
+    },
+    {
+      "id": 3,
+      "name": "Rafa",
+      "course": "Computação"
     }
   ]
 }
