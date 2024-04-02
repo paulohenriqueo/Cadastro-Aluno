@@ -2,16 +2,7 @@
     <div class="row">
       <div class="col-7 m-auto">
         <h1 class="text-center">Cadastro de Alunos</h1>
-        <form [formGroup]="formGroupStudent">  <!--[formGroupName=""] vincula o formulário com -->
-          <div class="mb-3">
-            <label for="matricula" class="form-label">Matricula</label>
-            <input
-              type="text"
-              class="form-control"
-              id="matricula"
-              formControlName="id"
-              />
-          </div>
+        <form [formGroup]="formGroupStudent">  <!--[formGroupName=""] vincula o formulário com a instancia -->
           <div class="mb-3">
             <label for="aluno" class="form-label">Aluno</label>
             <input
@@ -44,6 +35,7 @@
                 <th scope="col">Matricula</th>
                 <th scope="col">Nome</th>
                 <th scope="col">Curso</th>
+                <th class="d-flex justify-content-end" scope="col">Opções</th>
               </tr>
             </thead>
             <tbody>
@@ -51,6 +43,14 @@
                 <th scope="row">{{student.id}}</th>
                 <td>{{student.name}}</td>
                 <td>{{student.course}}</td> 
+                <td class="d-flex justify-content-end">
+                  <button class="btn btn-danger me-2"
+                  (click)="delete(student)"
+                  >Remover</button>
+                  <button class="btn btn-primary">
+                    Editar 
+                  </button>
+                </td>
               </tr> 
             </tbody>
           </table>
