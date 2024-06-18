@@ -8,7 +8,7 @@ import { StudentService } from '../student.service';
   templateUrl: './students.component.html',
   styleUrl: './students.component.css'
 })
-export class StudentsComponent implements OnInit {
+export class StudentsComponent implements OnInit  {
   students: Student[] = [];
   formGroupStudent : FormGroup;
   isEditing: boolean = false;
